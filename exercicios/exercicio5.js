@@ -25,4 +25,6 @@ switch (peca) {
     default:
         movimento = "Erro: Peça inválida.";
         break;
-}   
+}
+
+console.log(movimento);
