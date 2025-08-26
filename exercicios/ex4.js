@@ -1,22 +1,23 @@
-/* Escreva um código que receba três ângulos de um triângulo e:
+function validarTriangulo(angulo1, angulo2, angulo3) {
+  if (angulo1 <= 0 || angulo2 <= 0 || angulo3 <= 0) {
+    console.error("Erro: Todos os ângulos devem ser maiores que zero.");
+    return false;
+  }
 
-Retorne true se forem válidos.
-Retorne false caso contrário.
-Exiba uma mensagem de erro se algum ângulo for inválido.
-Dica: A soma dos ângulos deve ser 180°. */
-
-let nome = prompt("Digite seu nome:");
-if (nome != null) {
-  console.log("Olá, " + nome + "!");
+  const soma = angulo1 + angulo2 + angulo3;
+  if (soma > 180) {
+    console.error("Erro: A soma dos ângulos ultrapassou 180°.");
+    return false;
+    /*console.error("Erro: A soma dos ângulos deve ser exatamente 180°.");
+    return false;*/
+  } else if (soma < 180) {
+    console.error(
+      "Erro: A soma dos ângulos está menor que 180º, e deve ser exatamente igual 180º"
+    );
+    return false;
+  }
+  console.log(" | Angulos aprovados.");
+  return true;
 }
 
-/*  let angulo2 = prompt("Digite o segundo angulo: ");
-  if (angulo2 != null && somaDosAngulos + angulo2 < 180 && angulo2 > 0) {
-    somaDosAngulos = angulo1 + angulo2;
-  }
-  let angulo3 = prompt("Digite o terceiro angulo: ");
-  if (angulo3 != null && somaDosAngulos + angulo3 == 180 && angulo3 > 0) {
-  }
-} else {
-  console.log("Angulo falso");
-}*/
+console.log(validarTriangulo(60, 60, 30));
