@@ -1,4 +1,4 @@
-# 🚀 Lista de Exercícios de JavaScript
+"# 🚀 Lista de Exercícios de JavaScript
 
 Bem-vindo(a)! 🎉  
 Este repositório contém uma série de exercícios práticos de **JavaScript**, com foco em **lógica condicional**, **operadores aritméticos** e **estruturas de decisão**.
